@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ورود | دانا</title>
+<link rel="stylesheet" href="tailwind.css">
+<link rel="stylesheet" href="style.css">
+<script src="theme.js"></script>
+<script src="js/api.js"></script>
+</head>
+<body class="bg-base text-ink font-sans min-h-screen flex items-center justify-center vector-field p-6">
+
+  <main class="enter w-full max-w-md">
+
+    <!-- نشان --><div class="flex items-center justify-center gap-2 mb-8">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <circle cx="14" cy="5" r="2.4" fill="#e8a33d"/>
+        <circle cx="5" cy="20" r="2.4" fill="#4dd6c4"/>
+        <circle cx="23" cy="20" r="2.4" fill="#4dd6c4"/>
+        <path d="M14 7.2 6.2 18.5M14 7.2 21.8 18.5M6.6 20h14.8" stroke="#2a2d3e" stroke-width="1.4"/>
+      </svg>
+      <span class="text-lg font-bold">دانا</span>
+    </div>
+
+    <div class="bg-surface border border-line rounded-md p-8">
+      <div class="tabs">
+        <input type="radio" name="auth-tab" id="tab-login" checked>
+        <input type="radio" name="auth-tab" id="tab-signup">
+
+        <div class="tab-labels flex items-center gap-6 border-b border-line mb-6 text-sm">
+          <label for="tab-login" class="pb-3 font-medium">ورود</label>
+          <label for="tab-signup" class="pb-3 font-medium">ساخت حساب</label>
+        </div>
+
+        <!-- ورود -->
+        <div id="panel-login">
+          <p class="text-muted text-sm mb-6">خوش برگشتی. با ایمیل و رمز عبورت وارد شو.</p>
+          <form id="login-form" class="space-y-4">
+            <div>
+              <label class="block text-sm text-muted mb-1.5" for="login-email">ایمیل</label>
+              <input id="login-email" name="email" type="email" required
+                class="w-full bg-raised border border-line rounded-md px-3.5 py-2.5 text-sm placeholder:text-muted/60 focus:border-accent focus:outline-none"
+                placeholder="name@company.com">
+            </div>
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="text-sm text-muted" for="login-pass">رمز عبور</label>
+                <a href="#" class="text-xs text-cyan hover:underline">فراموشش کردم</a>
+              </div>
+              <input id="login-pass" name="password" type="password" required
+                class="w-full bg-raised border border-line rounded-md px-3.5 py-2.5 text-sm focus:border-accent focus:outline-none"
+                placeholder="••••••••">
+            </div>
+            <button type="submit"
+              class="w-full bg-accent text-base font-bold rounded-md py-2.5 text-sm hover:brightness-110 transition">
+              ورود
+            </button>
+          </form>
+        </div>
+
+        <!-- ثبت‌نام -->
+        <div id="panel-signup">
+          <p class="text-muted text-sm mb-6">یک حساب جدید بساز و اولین چت‌باتت رو راه بنداز.</p>
+          <form id="signup-form" class="space-y-4">
+            <div>
+              <label class="block text-sm text-muted mb-1.5" for="su-name">نام (اختیاری)</label>
+              <input id="su-name" name="name" type="text"
+                class="w-full bg-raised border border-line rounded-md px-3.5 py-2.5 text-sm focus:border-accent focus:outline-none"
+                placeholder="نام و نام خانوادگی">
+            </div>
+            <div>
+              <label class="block text-sm text-muted mb-1.5" for="su-email">ایمیل</label>
+              <input id="su-email" name="email" type="email" required
+                class="w-full bg-raised border border-line rounded-md px-3.5 py-2.5 text-sm focus:border-accent focus:outline-none"
+                placeholder="name@company.com">
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label class="block text-sm text-muted mb-1.5" for="su-pass">رمز عبور</label>
+                <input id="su-pass" name="password" type="password" required
+                  class="w-full bg-raised border border-line rounded-md px-3.5 py-2.5 text-sm focus:border-accent focus:outline-none"
+                  placeholder="••••••••">
+              </div>
+              <div>
+                <label class="block text-sm text-muted mb-1.5" for="su-pass2">تکرار رمز</label>
+                <input id="su-pass2" name="password2" type="password" required
+                  class="w-full bg-raised border border-line rounded-md px-3.5 py-2.5 text-sm focus:border-accent focus:outline-none"
+                  placeholder="••••••••">
+              </div>
+            </div>
+            <button type="submit"
+              class="w-full bg-accent text-base font-bold rounded-md py-2.5 text-sm hover:brightness-110 transition">
+              ساخت حساب
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-muted mt-6">
+      با ورود، قوانین استفاده از «دانا» رو می‌پذیری.
+    </p>
+  </main>
+<script src="js/login.js"></script>
+</body>
+</html>

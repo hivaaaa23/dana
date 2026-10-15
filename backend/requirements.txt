@@ -1,0 +1,17 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+pydantic-settings
+email-validator
+pyjwt
+pwdlib[argon2]
+cryptography
+python-multipart
+openai
+chromadb
+pypdf
+python-docx
+pytesseract
+pypdfium2
+redis
